@@ -1,0 +1,66 @@
+body {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 25vh auto 40vh auto;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "article article article"
+    "footer footer footer";
+    column-gap: 10px;
+    row-gap: 10px;
+
+}
+
+h1{
+    text-align: center;
+
+}
+
+header{
+
+        grid-area: header;
+        background-color: cornflowerblue;
+}
+
+nav{
+
+    grid-area: nav;
+    background-color: aquamarine;
+}
+
+article{
+
+    color: white;
+    background-color: navy;
+}
+
+footer{
+
+    grid-area: footer;
+    background-color: wheat;
+}
+
+/****************************  RESPONSIVE *****************************/
+
+@media screen and (max-width:768px) {
+
+    body{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25vh auto 40vh auto;
+        grid-template-areas:
+        "header"
+        "nav"
+        "article"
+        "article"
+        "article"
+        "footer";
+       
+    }
+}
+
+
+
